@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
         <div><span style="font-size:24px;">👨‍💼</span> <span style="font-size:20px; font-weight:bold;">এডমিন প্যানেল</span></div>
         <div>
             <span style="margin-right:20px;">মিরাজ</span>
@@ -16,7 +16,6 @@
     </div>
 
     <div style="max-width:1200px; margin:30px auto; padding:0 20px;">
-        <!-- ভাউচার যোগ -->
         <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08); margin-bottom:25px;">
             <h3>➕ নতুন ভাউচার যোগ করুন</h3>
             <form id="voucherForm" onsubmit="addVoucher(event)">
@@ -39,7 +38,6 @@
             </form>
         </div>
 
-        <!-- সব ভাউচার -->
         <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
             <h3>📋 সব ভাউচারের তালিকা</h3>
             <table style="width:100%; border-collapse:collapse; margin-top:15px;">

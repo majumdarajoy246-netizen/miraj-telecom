@@ -12,13 +12,11 @@
             <h1 style="text-align:center;">📱 মিরাজ টেলিকম</h1>
             <p style="text-align:center; color:#666;">লগইন করুন</p>
 
-            <!-- ট্যাব -->
             <div style="display:flex; gap:10px; margin:20px 0;">
                 <button id="customerTabBtn" style="flex:1; padding:10px; background:#f39c12; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">👤 কাস্টমার</button>
                 <button id="adminTabBtn" style="flex:1; padding:10px; background:#ddd; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">👨‍💼 এডমিন</button>
             </div>
 
-            <!-- কাস্টমার ফর্ম -->
             <div id="customerForm">
                 <form onsubmit="customerLogin(event)">
                     <div style="margin-bottom:15px;">
@@ -37,7 +35,6 @@
                 </div>
             </div>
 
-            <!-- এডমিন ফর্ম -->
             <div id="adminForm" style="display:none;">
                 <form onsubmit="adminLogin(event)">
                     <div style="margin-bottom:15px;">
@@ -53,7 +50,6 @@
                 </form>
             </div>
 
-            <!-- সাইনআপ -->
             <div id="signupDiv" style="display:none; margin-top:20px; border-top:1px solid #ddd; padding-top:20px;">
                 <h3>📝 নতুন একাউন্ট</h3>
                 <form onsubmit="customerSignup(event)">
