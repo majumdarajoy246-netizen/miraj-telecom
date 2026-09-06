@@ -20,9 +20,7 @@ A complete customer management system for Miraj Telecom mobile service shop.
 3. Admin can add vouchers
 4. Customer can search vouchers and see own products
 
-## Default Admin Login
-- Username: `miraj`
-- Password: `admin123`
+
 
 ## Live Demo
 [https://majumdarajoy246-netizen.github.io/miraj-telecom/](https://majumdarajoy246-netizen.github.io/miraj-telecom/)
