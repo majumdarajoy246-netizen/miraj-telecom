@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মিরাজ টেলিকম - লগইন</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1 style="text-align:center;">📱 মিরাজ টেলিকম</h1>
+            <p style="text-align:center; color:#666;">লগইন করুন</p>
+
+            <!-- ট্যাব -->
+            <div style="display:flex; gap:10px; margin:20px 0;">
+                <button id="customerTabBtn" style="flex:1; padding:10px; background:#f39c12; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">👤 কাস্টমার</button>
+                <button id="adminTabBtn" style="flex:1; padding:10px; background:#ddd; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">👨‍💼 এডমিন</button>
+            </div>
+
+            <!-- কাস্টমার ফর্ম -->
+            <div id="customerForm">
+                <form onsubmit="customerLogin(event)">
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block; font-weight:600;">📞 মোবাইল</label>
+                        <input type="text" id="customerPhone" placeholder="০১৭xxxxxxxx" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required>
+                    </div>
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block; font-weight:600;">🔒 পাসওয়ার্ড</label>
+                        <input type="password" id="customerPass" placeholder="পাসওয়ার্ড" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required>
+                    </div>
+                    <button type="submit" style="width:100%; padding:14px; background:#f39c12; border:none; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer;">কাস্টমার লগইন</button>
+                    <p id="customerError" style="color:red; text-align:center; margin-top:10px;"></p>
+                </form>
+                <div style="text-align:center; margin-top:15px;">
+                    <a href="#" onclick="showSignup()" style="color:#f39c12; font-weight:bold;">নতুন একাউন্ট খুলুন</a>
+                </div>
+            </div>
+
+            <!-- এডমিন ফর্ম -->
+            <div id="adminForm" style="display:none;">
+                <form onsubmit="adminLogin(event)">
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block; font-weight:600;">👤 ইউজারনেম</label>
+                        <input type="text" id="adminUser" placeholder="এডমিন ইউজারনেম" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required>
+                    </div>
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block; font-weight:600;">🔒 পাসওয়ার্ড</label>
+                        <input type="password" id="adminPass" placeholder="পাসওয়ার্ড" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required>
+                    </div>
+                    <button type="submit" style="width:100%; padding:14px; background:#f39c12; border:none; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer;">এডমিন লগইন</button>
+                    <p id="adminError" style="color:red; text-align:center; margin-top:10px;"></p>
+                </form>
+            </div>
+
+            <!-- সাইনআপ -->
+            <div id="signupDiv" style="display:none; margin-top:20px; border-top:1px solid #ddd; padding-top:20px;">
+                <h3>📝 নতুন একাউন্ট</h3>
+                <form onsubmit="customerSignup(event)">
+                    <div style="margin-bottom:10px;"><input type="text" id="signupName" placeholder="নাম" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div style="margin-bottom:10px;"><input type="text" id="signupPhone" placeholder="মোবাইল" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div style="margin-bottom:10px;"><input type="password" id="signupPass" placeholder="পাসওয়ার্ড" style="width:100%; padding:12px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <button type="submit" style="width:100%; padding:14px; background:#f39c12; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">একাউন্ট তৈরি করুন</button>
+                </form>
+            </div>
+
+            <div style="text-align:center; margin-top:20px; color:#999; font-size:12px;">মিরাজ টেলিকম &copy; ২০২৪</div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

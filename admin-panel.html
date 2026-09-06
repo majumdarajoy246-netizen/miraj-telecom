@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মিরাজ টেলিকম - এডমিন প্যানেল</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center;">
+        <div><span style="font-size:24px;">👨‍💼</span> <span style="font-size:20px; font-weight:bold;">এডমিন প্যানেল</span></div>
+        <div>
+            <span style="margin-right:20px;">মিরাজ</span>
+            <button onclick="adminLogout()" style="background:white; color:#0f2027; padding:8px 20px; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">লগআউট</button>
+        </div>
+    </div>
+
+    <div style="max-width:1200px; margin:30px auto; padding:0 20px;">
+        <!-- ভাউচার যোগ -->
+        <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08); margin-bottom:25px;">
+            <h3>➕ নতুন ভাউচার যোগ করুন</h3>
+            <form id="voucherForm" onsubmit="addVoucher(event)">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div><label style="display:block; font-weight:600;">📝 স্লিপ</label><input type="text" id="vSlip" placeholder="MT-2024-006" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">📱 পণ্য</label><input type="text" id="vProduct" placeholder="iPhone 15" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">🏷️ ব্র্যান্ড</label><input type="text" id="vBrand" placeholder="Apple" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">📅 ক্রয় তারিখ</label><input type="date" id="vDate" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">📅 ওয়ারেন্টি শেষ</label><input type="date" id="vWarranty" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">👤 কাস্টমারের নাম</label><input type="text" id="vCustomer" placeholder="নাম" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">📞 মোবাইল</label><input type="text" id="vPhone" placeholder="০১৭xxxxxxxx" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;" required></div>
+                    <div><label style="display:block; font-weight:600;">📊 স্ট্যাটাস</label>
+                        <select id="vStatus" style="width:100%; padding:10px; border:2px solid #ddd; border-radius:8px;">
+                            <option value="Active">✅ সক্রিয়</option>
+                            <option value="Expired">❌ মেয়াদ উত্তীর্ণ</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" style="margin-top:20px; width:100%; padding:14px; background:#f39c12; border:none; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer;">➕ ভাউচার যোগ করুন</button>
+            </form>
+        </div>
+
+        <!-- সব ভাউচার -->
+        <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+            <h3>📋 সব ভাউচারের তালিকা</h3>
+            <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+                <thead>
+                    <tr style="background:#0f2027; color:white;">
+                        <th style="padding:12px; text-align:left;">স্লিপ</th>
+                        <th style="padding:12px; text-align:left;">পণ্য</th>
+                        <th style="padding:12px; text-align:left;">কাস্টমার</th>
+                        <th style="padding:12px; text-align:left;">মোবাইল</th>
+                        <th style="padding:12px; text-align:left;">স্ট্যাটাস</th>
+                        <th style="padding:12px; text-align:left;">অ্যাকশন</th>
+                    </tr>
+                </thead>
+                <tbody id="adminVoucherList"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

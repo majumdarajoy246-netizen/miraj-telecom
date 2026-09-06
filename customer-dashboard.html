@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মিরাজ টেলিকম - কাস্টমার প্যানেল</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div style="background:linear-gradient(135deg,#0f2027,#203a43); color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center;">
+        <div><span style="font-size:24px;">📱</span> <span style="font-size:20px; font-weight:bold;">মিরাজ টেলিকম</span></div>
+        <div>
+            <span id="customerName" style="margin-right:20px;">স্বাগতম!</span>
+            <button onclick="logout()" style="background:white; color:#0f2027; padding:8px 20px; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">লগআউট</button>
+        </div>
+    </div>
+
+    <div style="max-width:1200px; margin:30px auto; padding:0 20px;">
+        <!-- দোকান তথ্য -->
+        <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08); margin-bottom:25px;">
+            <h2>🏪 মিরাজ টেলিকম</h2>
+            <p>📍 শহীদ মিনার রোড, কুমিল্লা<br>📞 ০১৭১২-৩৪৫৬৭৮<br>🕐 সকাল ১০টা - রাত ৯টা</p>
+        </div>
+
+        <!-- সার্চ -->
+        <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08); margin-bottom:25px;">
+            <h3>🔍 ভাউচার / ওয়ারেন্টি চেক করুন</h3>
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                <input type="text" id="voucherSearch" placeholder="স্লিপ নাম্বার দিন (MT-2024-001)" style="flex:1; padding:12px 20px; border:2px solid #ddd; border-radius:8px; min-width:200px;">
+                <button onclick="searchVoucher()" style="padding:12px 30px; background:#f39c12; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">সার্চ</button>
+            </div>
+            <div id="voucherResult" style="display:none; margin-top:20px; padding:20px; background:#f8f9fa; border-radius:12px;"></div>
+        </div>
+
+        <!-- আমার পণ্য -->
+        <div style="background:white; padding:25px; border-radius:16px; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+            <h3>📋 আমার পণ্যের তালিকা</h3>
+            <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+                <thead>
+                    <tr style="background:#0f2027; color:white;">
+                        <th style="padding:12px; text-align:left;">স্লিপ</th>
+                        <th style="padding:12px; text-align:left;">পণ্য</th>
+                        <th style="padding:12px; text-align:left;">ব্র্যান্ড</th>
+                        <th style="padding:12px; text-align:left;">ওয়ারেন্টি শেষ</th>
+                        <th style="padding:12px; text-align:left;">স্ট্যাটাস</th>
+                    </tr>
+                </thead>
+                <tbody id="customerProductList"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
